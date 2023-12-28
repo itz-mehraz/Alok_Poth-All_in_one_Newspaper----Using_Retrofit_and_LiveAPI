@@ -19,19 +19,18 @@
 
 
         <TextView
+            android:id="@+id/etusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Azeem"
-            android:id="@+id/etusername"
-            />
+            android:text="Azeem" />
 
         <TextView
+            android:id="@+id/etuseremail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="azeem@gmail.com"
-            android:id="@+id/etuseremail"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp"
+            android:text="azeem@gmail.com" />
 
     </LinearLayout>
 
@@ -40,3 +39,7 @@
 
 
 </androidx.cardview.widget.CardView>
+
+
+
+

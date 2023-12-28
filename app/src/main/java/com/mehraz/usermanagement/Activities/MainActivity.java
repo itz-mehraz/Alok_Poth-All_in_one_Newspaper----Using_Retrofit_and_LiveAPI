@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(userPassword.length()<8){
             password.requestFocus();
-            password.setError("Please enter your name");
+            password.setError("password must contine 8 digit");
             return;
         }
 

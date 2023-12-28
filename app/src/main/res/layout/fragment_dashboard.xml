@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NavFragments.DashboardFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="10dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,13 +19,12 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-
+            <!-- Existing TextViews -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:id="@+id/etname"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,20 +32,71 @@
                 android:id="@+id/etemail"
                 android:layout_marginTop="3dp"/>
 
+            <!-- ImageView for Kaler Konto -->
+            <ImageView
+                android:id="@+id/imageKalerKonto"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/kalerkonto_logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"/>
+
+            <!-- ImageView for Prothom Alo -->
+            <ImageView
+                android:id="@+id/imageProthomAlo"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/prothomalo_logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/imageBbcNews"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/bbc"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/imageSomokal"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/somokal" />
+
+            <ImageView
+                android:id="@+id/imageInqalab"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/inqalab"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/imageManob"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/manob"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/imageNoya"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/noyadiganto"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+
+            <ImageView
+                android:id="@+id/imageJugantor"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/jugantor"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
         </LinearLayout>
 
-
-
-
-
-
-
-
     </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-</FrameLayout>
+</ScrollView>

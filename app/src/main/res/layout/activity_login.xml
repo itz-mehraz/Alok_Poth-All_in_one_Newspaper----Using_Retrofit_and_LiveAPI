@@ -16,7 +16,7 @@
         android:gravity="center"
         android:textSize="100dp"
         android:fontFamily="cursive"
-        android:textColor="#ED4F86"
+        android:textColor="#E36893"
         />
 
     <com.google.android.material.textfield.TextInputLayout

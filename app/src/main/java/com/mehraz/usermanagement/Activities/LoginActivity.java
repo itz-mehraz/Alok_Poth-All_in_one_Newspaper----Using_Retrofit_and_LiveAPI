@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(userEmail.isEmpty()){
             email.requestFocus();
-            email.setError("Please enter your name");
+            email.setError("Please enter your Email");
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         if(userPassword.length()<8){
             password.requestFocus();
-            password.setError("Please enter your name");
+            password.setError("password should be at least 8 character");
             return;
         }
 
