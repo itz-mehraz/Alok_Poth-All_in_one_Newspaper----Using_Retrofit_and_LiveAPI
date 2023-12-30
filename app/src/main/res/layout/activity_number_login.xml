@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NumberLoginActivity">
+
+    <!-- Phone Number Section -->
+    <LinearLayout
+        android:id="@+id/phoneNumberSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:background="@android:color/white"> <!-- White background -->
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
+            android:backgroundTint="#5F23C8" /> <!-- Blue underline color -->
+
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"
+            android:background="#401292"
+            android:textSize="16sp" /> <!-- Blue button with white text -->
+    </LinearLayout>
+
+    <!-- OTP Verification Section (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/otpSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@android:color/white"> <!-- White background -->
+
+        <EditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:backgroundTint="#673AB7" /> <!-- Orange underline color -->
+
+        <Button
+            android:id="@+id/btnVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify OTP"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"
+            android:background="#451994"
+            android:textSize="16sp" /> <!-- Orange button with white text -->
+    </LinearLayout>
+</RelativeLayout>

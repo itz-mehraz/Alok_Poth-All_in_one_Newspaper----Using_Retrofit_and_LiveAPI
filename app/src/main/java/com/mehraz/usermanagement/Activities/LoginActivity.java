@@ -23,10 +23,9 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-    EditText email,password;
+    EditText email, password;
     Button login;
-    TextView registerlink;
+    TextView registerlink, loginWithNumber; // Add loginWithNumber TextView
     SharedPrefManager sharedPrefManager;
 
     @Override
@@ -34,40 +33,39 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //hide actionbar
+        // Hide action bar
         getSupportActionBar().hide();
 
-        //hide status bar
+        // Hide status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        email=findViewById(R.id.etemail);
-        password=findViewById(R.id.etpassword);
-        login=findViewById(R.id.btnlogin);
-        registerlink=findViewById(R.id.registerlink);
+        email = findViewById(R.id.etemail);
+        password = findViewById(R.id.etpassword);
+        login = findViewById(R.id.btnlogin);
+        registerlink = findViewById(R.id.registerlink);
+        loginWithNumber = findViewById(R.id.btnLoginWithPhoneNumber); // Initialize loginWithNumber TextView
 
         registerlink.setOnClickListener(this);
         login.setOnClickListener(this);
+        loginWithNumber.setOnClickListener(this); // Set click listener for loginWithNumber
 
-        sharedPrefManager=new SharedPrefManager(getApplicationContext());
-
-
+        sharedPrefManager = new SharedPrefManager(getApplicationContext());
     }
 
     @Override
     public void onClick(View view) {
-
-        switch (view.getId()){
-
+        switch (view.getId()) {
             case R.id.btnlogin:
                 userLogin();
                 break;
             case R.id.registerlink:
                 switchOnRegister();
                 break;
-
+            case R.id.btnLoginWithPhoneNumber:
+                redirectToNumberLogin(); // Redirect to NumberLoginActivity
+                break;
         }
-
     }
 
     private void userLogin() {
@@ -129,20 +127,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
 
     }
-
     private void switchOnRegister() {
-        Intent i=new Intent(LoginActivity.this,MainActivity.class);
+        Intent i = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(i);
     }
 
+    private void redirectToNumberLogin() {
+        Intent intent = new Intent(LoginActivity.this, NumberLoginActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
-
-        if(sharedPrefManager.isLoggedIn()){
-            Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        if (sharedPrefManager.isLoggedIn()) {
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
     }

@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/alokpoth"
         android:label="আলোক পথ"
-        android:roundIcon="@drawable/ic_launcher_background"
+        android:roundIcon="@drawable/alokpoth"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
@@ -17,6 +17,12 @@
         <activity
             android:name=".Activities.HomeActivity"
             android:exported="false" />
+
+        <!-- Add NumberLoginActivity -->
+        <activity
+            android:name=".Activities.NumberLoginActivity"
+            android:exported="true" />
+
         <activity
             android:name=".Activities.MainActivity"
             android:exported="false" /> <!-- LoginActivity has intent filters, so it needs android:exported -->

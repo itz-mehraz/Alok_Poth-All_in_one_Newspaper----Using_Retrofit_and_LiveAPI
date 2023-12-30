@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Activities.LoginActivity">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +35,6 @@
             android:id="@+id/etemail"
             android:inputType="textEmailAddress"/>
 
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -58,9 +56,7 @@
             android:id="@+id/etpassword"
             android:inputType="textPassword"/>
 
-
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:layout_width="match_parent"
@@ -77,14 +73,34 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Not Registered|  Create your Account"
+        android:text="Not Registered | Create your Account"
         android:layout_below="@id/btnlogin"
         android:gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:id="@+id/registerlink"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login with Phone Number"
+        android:textColor="#fff"
+        android:id="@+id/btnLoginWithPhoneNumber"
+        android:background="#511EAB"
+        android:layout_below="@id/registerlink"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
 
-
-
+    <!-- Add Login with Number TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Phone Number"
+        android:id="@+id/loginWithNumber"
+        android:layout_below="@+id/btnLoginWithPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
 
 </RelativeLayout>
